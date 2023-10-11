@@ -13,15 +13,15 @@ class Solution {
         }
         for(int i=0;i<nums.length;i++){
            // nelow line can be replaced with map as well
-           if(curr.contains(nums[i])) continue;
-           //if(set.contains(nums[i])) continue; // element already exists, skip
+           //if(curr.contains(nums[i])) continue;
+           if(set.contains(nums[i])) continue; // element already exists, skip
            //do
-           // set.add(nums[i]);
+            set.add(nums[i]);
             curr.add(nums[i]);
             create(nums,curr,set);
             //undo
             curr.remove(curr.size()-1);
-           // set.remove(nums[i]);
+            set.remove(nums[i]);
         }
     }
 }
